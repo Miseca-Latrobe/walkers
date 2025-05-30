@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* Styling for the Input Button  */
+
+#csvUpload {
+  padding: 10px;
+  border: 2px dashed #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+#csvUpload:hover {
+  border-color: #4caf50;
+  background-color: #eaffea;
+}
