@@ -2,14 +2,16 @@ import './App.css';
 
 import React, {useState} from "react";
 import CsvReader from './utils/CsvReader';
+import { processCsvData } from "./utils/processCsvData";
 
 function App() {
 
   const [csvData, setCsvData] = useState([]);
 
   const handleData = (data) => {
-    console.log("Parsed CSV Data:", data);
-    setCsvData(data);
+    const processedData = processCsvData(data);
+    console.log("Processed CSV Data:", processedData);
+    setCsvData(processedData);
   };
 
   return (
