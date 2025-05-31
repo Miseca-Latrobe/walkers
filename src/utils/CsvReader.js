@@ -1,6 +1,9 @@
 import React from "react";
 import Papa from "papaparse";
 
+// Used PapaParse to handle the conversion of the CSV file into a Javascript object
+// It handles common edge cases, supports header row mapping and is simple to implement
+
 export default function CsvReader({onDataParsed}) {
 
     const handleFileChange = (e) => {
