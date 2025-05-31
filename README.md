@@ -36,7 +36,7 @@ The application currently uses the "home screen" to display a button that allows
 Once the file has been uploaded it is read through papa parse and then processed using utility functions that were created to mimic the output provided through the Excel CSV Converter. 
 
 The data is then available in the client side for further manipulation for graphing - Each row is now an object with Key:Value pairs for each of the original columns an example is below:
-
+```
   {
     "activityId": "01JVABZXAZXZY3CQ5ARC9KZX6S",
     "user": "assistedpassage.mena@Zenith.com",
@@ -53,3 +53,4 @@ The data is then available in the client side for further manipulation for graph
     "Data Leakage": "Data Leakage",
     "Week Ending": "17/05/2025"
   }
+```
