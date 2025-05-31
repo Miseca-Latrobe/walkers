@@ -18,6 +18,7 @@ function App() {
     <div style={{ padding: "2rem" }}>
       <h1>CSV Uploader</h1>
       <CsvReader onDataParsed={handleData} />
+       {/* The line below used to display the data on screen to view the output of the data upload and manipulation - It will be deleted for production build*/}
       <pre>{JSON.stringify(csvData, null, 2)}</pre>
     </div>
   );

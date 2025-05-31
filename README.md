@@ -29,42 +29,27 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Current Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application currently uses the "home screen" to display a button that allows a user to select a file and upload it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once the file has been uploaded it is read through papa parse and then processed using utility functions that were created to mimic the output provided through the Excel CSV Converter. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The data is then available in the client side for further manipulation for graphing - Each row is now an object with Key:Value pairs for each of the original columns an example is below:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  {
+    "activityId": "01JVABZXAZXZY3CQ5ARC9KZX6S",
+    "user": "assistedpassage.mena@Zenith.com",
+    "date": "15/05/2025",
+    "time": "13:50",
+    "riskScore": "500",
+    "integration": "office-365-email",
+    "policiesBreached": "{\"dataLeakage\":[\"emailContainedPasswordProtectedDocument\"]}",
+    "values": "{\"destinations\":[\"oliver.hall@Zenith.com\",\"ava.clark@Zenith.com\",\"emma.thompson@Zenith.com\",\"s9580@iom.int\",\"e3745@iom.int\",\"o5117@iom.int\",\"l7248@iom.int\",\"s2665@iom.int\",\"mia.hall@Zenith.com\",\"ava.johnson@Zenith.com\",\"e7492@iom.int\",\"e2793@iom.int\",\"m6354@iom.int\"]}",
+    "status": "trusted",
+    "managerAction": "",
+    "emailDomain": "Zenith.com",
+    "Email": "Email",
+    "Data Leakage": "Data Leakage",
+    "Week Ending": "17/05/2025"
+  }

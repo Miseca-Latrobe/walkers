@@ -1,10 +1,12 @@
+import { addWeekEnding } from "./addWeekEnding";
 import { extractEmailDomains } from "./extractEmailDomains";
 import { extractPolicyViolations } from "./extractPolicyViolations";
 
 export function processCsvData(data) {
 
-  const withoutDomains = extractEmailDomains(data);
-  const withViolations = extractPolicyViolations(withoutDomains);
+  let updatedData = extractEmailDomains(data);
+  updatedData = extractPolicyViolations(updatedData);
+  updatedData = addWeekEnding(updatedData)
 
-  return withViolations;
+  return updatedData;
 }
