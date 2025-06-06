@@ -8,26 +8,26 @@ const headers = [
   "Spreadsheets", "User At Risk", "Zip Files"
 ];
 
-// Pre-normalise headers: remove spaces and lowercase
-const normalisedHeaders = headers.map(h => h.replace(/\s+/g, "").toLowerCase());
+const normalisedHeaders = headers.map(h =>
+  h.replace(/\s+/g, "").toLowerCase()
+);
 
 export function extractPolicyViolations(data) {
-
   return data.map(row => {
-
     const policyRaw = row["policiesBreached"] || "";
-    // normalise policy: remove spaces and lowercase
     const policy = policyRaw.replace(/\s+/g, "").toLowerCase();
 
-    // create a temporary copy of the row
-    const newRow = { ...row };
+    const matched = [];
 
     headers.forEach((header, index) => {
       if (policy.includes(normalisedHeaders[index])) {
-        newRow[header] = header;
+        matched.push(header);
       }
     });
 
-    return newRow;
+    return {
+      ...row,
+      policyViolations: matched, 
+    };
   });
 }
